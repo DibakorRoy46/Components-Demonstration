@@ -6,7 +6,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let row of data">
-            <td *ngFor="let head of header">{{row[head.key]}}</td>           
+            <td *ngFor="let head of header">
+                {{row[head.key]}}
+            </td>                
         </tr>     
     </tbody>
 </table>

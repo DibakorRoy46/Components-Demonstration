@@ -1,0 +1,20 @@
+<app-divider>
+    Modal Component
+</app-divider>
+
+<button (click)="onClick()" class="ui inverted teal button"> Open the Modal</button>
+<app-modal (click)="onClick()" *ngIf="openModal">
+    <h3>Profile Picture</h3>
+    <img src="https://semantic-ui.com/images/avatar2/large/rachel.png">
+    <div class="ui header">We've auto-chosen a profile image for you.</div>
+
+    <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image
+        associated with your registered e-mail address.</p>
+    <p>Is it okay to use this photo?</p>
+</app-modal>
+
+<app-divider>
+    Accordion Component
+</app-divider>
+
+<app-accordion [items]="data"></app-accordion>

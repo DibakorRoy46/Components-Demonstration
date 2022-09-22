@@ -1,9 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BiographyComponent } from './biography/biography.component';
 import { CollectionHomeComponent } from './collection-home/collection-home.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { PartnersComponent } from './partners/partners.component';
 
 const routes: Routes = [
-  {path:'collections',component:CollectionHomeComponent}
+  {
+    path:'',
+    component:CollectionHomeComponent,
+    children:[
+      {path:'',component:BiographyComponent},
+      {path:'partners',component:PartnersComponent},
+      {path:'companies',component:CompaniesComponent}
+    ]
+  },
+ 
 ];
 
 @NgModule({

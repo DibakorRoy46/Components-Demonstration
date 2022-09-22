@@ -11,15 +11,23 @@ const routes: Routes = [
     component:HomeComponent
   },
   { 
-    path:'',
+    path:'elements',
     loadChildren:()=>import('./elements/elements.module').then(m=>m.ElementsModule
   )},
   { 
-    path:'',
+    path:'collections',
     loadChildren:()=>import('./collections/collections.module').then(m=>m.CollectionsModule)
   },
+  { 
+    path:'views',
+    loadChildren:()=>import('./views/views.module').then(m=>m.ViewsModule)
+  },
+  { 
+    path:'modules',
+    loadChildren:()=>import('./modules/modules.module').then(m=>m.ModulesModule)
+  },
   {
-    path:'',
+    path:'**',
     loadChildren:()=>import('./not-found/not-found.module').then(m=>m.NotFoundModule)
   }
 ];
